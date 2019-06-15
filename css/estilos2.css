@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+h2 {
+  text-align: center;
+  color: white;
+}
+
+header {
+  background-image: url("images/logo.png");
+}
+
+header img {
+float:left;}
+
+
+header ul{
+	list-style:none;
+	border-left:1px solid black;
+	width:100%;
+	overflow:auto;
+	padding-left:1px;
+	background-color: #91D6FF;
+	
+	}
+
+header ul li {
+
+		text-align:center;
+		float:left
+	}
+
+header ul li a {
+	color:black;
+	text-decoration:none;
+	border-right:1px solid black;
+	border-top:1px solid black;
+	/*border-bottom:1px solid black;*/
+	display:block;
+	padding:10px 30px;
+	background-repeat: no-repeat;
+	background-position: 5%
+	}
+
+header ul li a:hover	{
+	background-color:#E4E4E4;
+	background-repeat: no-repeat;
+	background-position: 5%
+	}
+
+#paginaweb{
+  background-color:#C0D34B;
+}
+
+
+div.caracteristicas {
+	display:none;
+}
+
+div#saldo {
+	display:none;
+}
+
+
+/* Contendor slide imagenes */
+.contenedor-imagenes {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Oculta imagenes por defecto */
+.misimagenes {
+  display: none;
+}
+
+/* Botones de anterior y siguiente */
+.anterior, .sig {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Posicion del boton "siguiente" */
+.sig {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.anterior:hover, .sig:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Texto */
+.texto {
+  color: #1BA9E1;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+/* N´úmero de texto (1/5) */
+.numeroimagen {
+  color: #1BA9E1;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/*Cículos para pasar imagen */
+.circulo {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+/* Para que cambie de color el fondo del circulo cuando pase
+raton o este activo.*/
+
+.active, .circulo:hover {
+  background-color: #5B5E66;
+}
+
+/* Animación de transición*/
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* FIN ESTILO SLIDESHOW*/
+
+/*CARACTERISTICAS OCULTAS POR DEFECTO*/
+.saldo {
+margin-bottom: 5px;
+}
+
+/*ESTILO ACORDEON*/
+
+/* Estilo de los botones abrir y cerrar el panel*/
+.acordeon {
+  background-color: #d8e585;
+  color: #444;
+  font-style: bold;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  text-align: center;
+}
+
+/* Añadir un fondo al boton si se pulsa sobre el(e .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #C0D34B;
+  border: 1px solid blue;
+}
+
+/* ACORDEON, POR DEFECTO OCULTADO. */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+/*ESTILO FILTRO+*/
+#movimientos {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#cuentas_lista {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#cuentas_lista li a {
+  border: 1px solid #ddd;
+  margin-top: -1px;
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+}
+
+#cuentas_lista li a:hover:not(.header) {
+  background-color: #eee;
+}
+/* FIN FILTRO */
+/*Estilo de tablas*/
+.panel table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.panel td {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+.panel tr:nth-child(even) {
+  background-color: #1BB8EB;
+}
+
+/*FIN ESTILO ACORDEON*/
+/*PIE DE PAGINA*/
+ footer {
+   background-color: black;
+   color: white;
+ }
+
+ #sociales i {
+   font-size: 45px;
+ }
+ }
+
