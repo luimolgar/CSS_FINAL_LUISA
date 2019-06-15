@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Web de Finanzas Personales</title>
+	<!--Iconos redes sociales-->
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Enlace hoja estilos -->
+  <link rel="stylesheet" type="text/css" href="css/estilos2.css">
+  <!--FAVICON-->
+  <link rel="icon" href="images/logo.png" type="image/png" sizes="16x16">
+  <!--logo-->
+</head>
+<body>
+	<header>
+		<nav id="navigation">
+      <!--<div class="logotipo">
+           <img src="images/logo.png" title="logo_empresa" alt="logo"/>
+      </div>-->
+	<!-- MENU -->
+		<ul class="nav-items">
+		<img src="images/logo.png" width="40" height="40" title="logo_empresa" alt="logo"/>
+			<li id="Inicio"><a href="#slide"><span>Inicio</span></a></li>
+            <li id="contacta" onclick="mostrarsaldo()"><a href="#saldo"><span>Saldo Actual</span></a></li>
+            <li id="tarifas" onclick="mostrarpresu()"><a href="#presu"><span>Presupuestos</span></a></li>
+		</ul>
+	</nav>
+	</header>
+	<div id="paginaweb">
+		<h2> FINTECH </h2>
+		<!-- Contenedor Imágenes -->
+		<a name="slide"></a>
+		<div class="contenedor-imagenes" id="slide">
+		  <!-- Imagenes y numero -->
+		  <div class="misimagenes fade">
+		    <div class="numeroimagen">1 / 5</div>
+		    <img src="images/cuentas.jpg" alt="cuentas" style="width:100%;height:500px;">
+		    <div class="texto">¿Tienes más de una cuenta? Ten la información en un solo lugar con <i>CUENTAS</i></div>
+		  </div>
+		  <div class="misimagenes fade">
+		    <div class="numeroimagen">2 / 5</div>
+		    <img src="images/control.jpg" alt="controlgastos" style="width:100%;height:500px;">
+		    <div class="texto">¿Quieres saber cuanto gastas e ingresas? Averígualo con <i>MOVIMIENTOS</i></div>
+		  </div>
+		  <div class="misimagenes fade">
+		    <div class="numeroimagen">3 / 5</div>
+		    <img src="images/calculadora.jpg" alt="calculadora" style="width:100%;height:500px;" >
+		    <div class="texto">¿Eres de la vieja escuela y quieres calculadorlo tú mismo? Hazlo con la <i> CALCULADORA </i></div>
+		  </div>
+		  <div class="misimagenes fade">
+		    <div class="numeroimagen">4 / 5</div>
+		    <img src="images/graficopresu.jpg" alt="presupuestos" style="width:100%;height:500px;">
+		    <div class="texto">Ahora puedes saber en qué gastas más con <i> PRESUPUESTOS</i></div>
+		  </div>
+		  <div class="misimagenes fade">
+		    <div class="numeroimagen">5 / 5</div>
+		    <img src="images/unclick.jpg" alt="facilusar" style="width:100%;height:500px;">
+		    <div class="texto">Y todo esto en un solo click. Registrate GRATIS!!</div>
+		  </div>
+		  <!-- Next and previous buttons -->
+		  <a class="anterior" onclick="plusSlides(-1)">&#10094;</a>
+		  <a class="sig" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<br>
+
+		<!-- Circulos siguiente imagen -->
+		<div style="text-align:center">
+		  <span class="circulo" onclick="currentSlide(1)"></span>
+		  <span class="circulo" onclick="currentSlide(2)"></span>
+		  <span class="circulo" onclick="currentSlide(3)"></span>
+		  <span class="circulo" onclick="currentSlide(4)"></span>
+		  <span class="circulo" onclick="currentSlide(5)"></span>
+		</div>
+		<!--FIN SLIDE IMAGENES-->
+		
+		<!--Comienzan caracteristicas -->
+		<!--Saldo-->
+		<div id="saldo" class="caracteristicas>
+		<a name="saldo"></a>
+		<H1 style="text-align:center;color:white">Conoce tu saldo actual</H1>
+		<h3>Saldo disponible: 399,50€</h3>
+              <input type="text" id="movimientos" onkeyup="movimientos_buscar()" placeholder="Buscar . . .">
+
+              <ul id="cuentas_lista">
+            <li><a href="#">Couta mensual TARJETA ORO: -20€</a></li>
+            <li><a href="#">Compra con Tarjeta: -100€</a></li>
+            <li><a href="#">Ingreso Cajero: +15€</a></li>
+            <li><a href="#">Recibo Orange: -150€</a></li>
+            <li><a href="#">Recibo coche PSA FINANTIAL: -200€</a></li>
+            <li><a href="#">Compra con Tarjeta -200€</a></li>
+            <li><a href="#">PRIMARK SEVILLA: 100€</a></li>
+            <li><a href="#">RETIRADA CAJERO: -30€</a></li>
+            <li><a href="#">Recibo Agua EMASESA: -30€</a></li>
+            <li><a href="#">RETIRADA CAJERO: -50€</a></li>
+            <li><a href="#">Recibo Luz ENDESA-80€</a></li>
+            <li><a href="#">Compra con tarjeta: -55,50€</a></li>
+            <li><a href="#">RETIRADA CAJERO: -100€</a></li>
+            <li><a href="#">Nómina: 1400€</a></li>
+          </ul>
+          </div>
+		<!--FIN saldo-->
+</br>
+</br>
+</br>
+	<!--Acordeon-->
+
+		<div id="presupuestos" class="caracteristicas">
+		<h2> PRESUPUESTOS </h2>
+		<a name="presu"></a>
+		<button class="acordeon">Facturas</button>
+		<div class="panel">
+		<table>
+		<tr>
+			<td>Luz</td>
+			<td>80 Euros</td>
+		</tr>
+		<tr>
+			<td>Agua</td>
+			<td>30 Euros</td>
+		</tr>
+		<tr>
+			<td>Gas</td>
+			<td>50 Euros</td>
+		</tr>
+		<tr>
+			<td>Internet+Móvil</td>
+			<td>100 Euros</td>
+		</tr>
+		</table>
+		</div>
+		<button class="acordeon">Comida</button>
+		<div class="panel">
+		<table>
+		<tr>
+			<td>Supermercado</td>
+			<td>200 Euros</td>
+		</tr>
+		<tr>
+			<td>Restaurantes</td>
+			<td>200 Euros</td>
+		</tr>
+		</table>
+		</div>
+		<button class="acordeon">Viajes</button>
+		<div class="panel">
+		<table>
+		<tr>
+			<td>Viajes</td>
+				<td>200 Euros</td>
+		</tr>
+		</table>
+		</div>
+		<button class="acordeon">Otros Gastos</button>
+		<div class="panel">
+		<table>
+		<tr>
+		<td>Seguros</td>
+		<td>1000 Euros</td>
+		</tr>
+		<tr>
+		<td>Averias</td>
+		<td>100 Euros</td>
+		</tr>
+		<tr>
+		<td>Otros</td>
+		<td>300 Euros</td>
+		</tr>
+		</table>
+	</div>
+	</div>
+	<!--FIN PRESUPUESTOS-->
+<!--Pie de pagina-->
+<footer>
+	<h3> SIGUENOS EN REDES SOCIALES </h3>
+	<div class="sociales">
+	    <a target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook-official" style="font-size:20px;color:#4267B2;float:right;"></i></a>
+	  <a target="_blank" href="https://twitter.com/"><i class="fa fa-twitter-square" style="font-size:20px;color:#00BBF2;float:right"></i></a>
+	    <a target="_blank" href="https://www.instagram.com/?hl=es"><i class="fa fa-instagram" style="font-size:20px;color:#FD2C80;float:right;"></i></a>
+	  <a href="https://www.youtube.com/?gl=ES&hl=es"> <i class="fa fa-youtube-square" style="font-size:20px;color:red;float:right"></i></a>
+	</div>
+	<p> FINTECH.&copy; 2019. Todos los derechos reservados.
+</footer>
+<script type="text/javascript" src="js/js.js"></script>
+</body>
+</html>
