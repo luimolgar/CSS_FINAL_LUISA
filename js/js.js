@@ -47,7 +47,7 @@ for (i = 0; i < acc.length; i++) {
     /* Entre la activaciçon y desactivacion */
     this.classList.toggle("active");
 
-    /* Toggle between hiding and showing the active panel */
+
     var panel = this.nextElementSibling;
     if (panel.style.display === "block") {
       panel.style.display = "none";
@@ -61,7 +61,7 @@ for (i = 0; i < acc.length; i++) {
 //SALDO DISPOINIBLE
 
 function movimientos_buscar() {
-  
+
   var input, filter, ul, li, a, i, txtValue;
   input = document.getElementById('movimientos');
   filter = input.value.toUpperCase();
